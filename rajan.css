@@ -1,0 +1,276 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  
+}
+p{
+  font-weight: bold;
+}
+  body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    
+  }
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid black 1px;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+}
+.navbar__title_s1{
+     color: #AE75CC;
+     margin: 3px;
+     margin-left: 10px;
+     
+}
+.navbar__title__s2{
+   border: solid black 1px;
+   font-size: larger;
+   margin: 5px;
+   padding: 10px;
+   flex-basis: 60%;
+   border-radius: 30px;
+   gap: 10px;
+   display: flex;
+   align-items: center;
+}
+.navbar__title__s2 input{
+  font-size: large;
+width: 100%;
+border: none;
+z-index: 2;
+}
+.navbar__title__s2 input:focus{
+  outline: none;
+}
+
+.navbar__title__s3{
+  display: flex;
+  gap: 20px;
+  font-weight: bold;
+  z-index: 2;
+}
+.icons{
+  display: flex;
+  gap: 20px;
+}
+.trend{
+  position: relative;
+}
+.trend__course{
+  border: solid black 1px;
+  padding: 10px;
+  position: absolute;
+  background-color: white;
+  display: none; 
+}
+.trend:hover .trend__course{
+  display: block;
+}
+.mylearning{
+  position: relative;
+  cursor: pointer;
+  
+ 
+}
+
+.mylearning__popup{
+  border: solid black 1px;
+  padding: 10px;
+  position: absolute;
+  top: 150%;
+  right: 0%;
+  background-color: white;
+  display: none;
+}
+.mylearning:hover .mylearning__popup{
+  display: block;
+ 
+
+  
+}
+
+.course{
+  
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  border-bottom: solid black 1px;
+  flex-wrap: wrap;
+  
+}
+.course p{
+  font-weight: bold;
+  background-color: #842AC2;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 30px;
+
+}
+.sales{
+  position: relative;
+}
+.sales img{
+  width: 100%;
+}
+.cs {
+  margin: 5px;
+  padding: 5px;
+  
+  
+}
+.cs__course{
+  flex-grow: 1;
+  flex-basis: 20%;
+}
+.cs__title{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.cs__course{
+flex-basis: 20%;
+flex-grow: 1;
+margin: 5px;
+}
+.cs__title img{
+  height: 60%;
+  width: 100%;
+  
+  
+}
+.livecourse{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px;
+  
+}
+.livecourse p{
+  border: solid black 1px;
+  
+  padding: 10px;
+  flex-grow: 1;
+  flex-basis: 25%;
+  
+  
+}
+.bar{
+  display: none;
+}
+.sales__discount{
+  border:solid black 1px;
+  width: fit-content;
+  padding: 20px;
+ 
+  position: absolute;
+  top: 10%;
+  left: 50px;
+  color: blue;
+  background-color: white;
+  animation-name: sale;
+  animation-duration: 3s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+
+}
+@keyframes sale {
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+}
+.course p:hover{
+  transition-duration: 1s;
+  background-color: transparent;
+  color: blue;
+
+
+}
+@media screen and (max-width:600px){
+  .course{
+    display: none;
+  }
+  .navbar__title__s2{
+    display: none;
+  }
+  .navbar__title__s3{
+    display: none;
+  }
+  .mylearning{
+    display: none;
+  }
+  .icons{
+    display: none;
+  }
+  .bar{
+    display: block;
+  }
+  body{
+    font-size: 12px;
+  }
+  .cs__course{
+    flex-basis: 40%;
+    flex-grow: 1;
+  }
+}
+.footer{
+  display: flex;
+  background-color: black;
+  color: white;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px;
+  gap: 20px;
+  align-items: center;
+}
+.footer__one { 
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+}
+.footer__one__s1 p{
+  padding: 10px;
+}
+.footer__one__s2 p{
+  padding: 10px;
+}
+@media screen and (max-width:800px){
+  .course{
+    display: none;
+  }
+  .navbar__title__s2{
+    display: none;
+  }
+  .navbar__title__s3{
+    display: none;
+  }
+  .mylearning{
+    display: none;
+  }
+  .icons{
+    display: none;
+  }
+  .bar{
+    display: block;
+  }
+  body{
+    font-size: 12px;
+  }
+  .cs__course{
+    flex-basis: 40%;
+    flex-grow: 1;
+  }
+}
